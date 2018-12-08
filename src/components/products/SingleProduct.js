@@ -3,7 +3,7 @@ import './SinglePorducto.scss'
 
 class SingleProduct extends Component {
   render() {
-    const {imagen, nombre, precio, id } = this.props.productDetail
+    const {imagen, nombre, precio} = this.props.productDetail
     if(!imagen) return null;
     return (
       <div className="info-producto">

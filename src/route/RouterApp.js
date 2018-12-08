@@ -7,7 +7,8 @@ import Navigation from './Navegation'
 class RouterApp extends Component {
 
   state = {
-    products: []
+    products: [],
+    termShearch: ''
   }
 
 componentWillMount() {
@@ -15,7 +16,37 @@ componentWillMount() {
     products: products
   })
 }
+
+search = (term) => {
+  if (term.length > 3) {
+
+    this.setState({
+      termShearch: term
+    })
+    
+  } else {
+    this.setState({
+      termShearch: ''
+    })
+  }
+
+  console.log(term)
+}
 render() {
+
+  let products = [...this.state.products];
+
+  let search = this.state.termShearch;
+
+  let productsFilter;
+  if (search !== '') {
+
+    productsFilter = products.filter(product => product.nombre.toLowerCase().includes(search.toLowerCase()))
+  } else {
+    productsFilter = products
+  }
+
+
   return (
     <BrowserRouter>
       <React.Fragment>
@@ -25,12 +56,14 @@ render() {
         <Switch>
           <Route exact path="/" render={() => (
             <Productos
-              productos={this.state.products}
+              search = {this.search}
+              productos={productsFilter}
             />
           )} />
           <Route exact path="/productos" render={() => (
             <Productos
-              productos={this.state.products}
+            search = {this.search}
+              productos={productsFilter}
             />
           )} />
           <Route exact path="/producto/:productoId" render={(props) => {
@@ -56,8 +89,3 @@ render() {
   }
   
   export default RouterApp 
-
-
-  {/* <Product
-              product={this.state.products[]}
-            /> */}

@@ -5,7 +5,7 @@ import Productos from './products/Productos';
 import Product from './products/Product';
 import Header from './header/Header';
 import SingleProduct from './products/SingleProduct';
-
+import Search from "./search/Search";
 
 
 export {
@@ -15,6 +15,7 @@ export {
   Productos,
   Product,
   Header,
-  SingleProduct
+  SingleProduct,
+  Search
 }
 
