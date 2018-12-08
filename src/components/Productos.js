@@ -8,7 +8,7 @@ export default class Productos extends Component {
 
         <ul className="lista-productos">
           {this.props.productos.map((product, idx) => 
-              <Product id={idx} product={product}/>
+              <Product key={idx} product={product}/>
           )}
         </ul>
       </div>

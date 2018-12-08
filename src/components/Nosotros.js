@@ -4,7 +4,7 @@ class Inicio extends Component {
   render() {
     return (
       <h1>
-        Bye
+        Bye esto es nosotros
       </h1>
     )
   }

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { Nosotros, Error404, Productos, Header, SingleProduct } from '../components/Index';
 import products from "../data/data.json";
+import Navigation from './Navegation'
 
 class RouterApp extends Component {
 
@@ -18,10 +19,16 @@ render() {
   return (
     <BrowserRouter>
       <React.Fragment>
+      <Navigation/>
         <Header/>
       
         <Switch>
           <Route exact path="/" render={() => (
+            <Productos
+              productos={this.state.products}
+            />
+          )} />
+          <Route exact path="/productos" render={() => (
             <Productos
               productos={this.state.products}
             />
@@ -31,6 +38,7 @@ render() {
             
             return (
               <SingleProduct
+                id={idProduct}
                 productDetail = {this.state.products[idProduct]}
               
               />

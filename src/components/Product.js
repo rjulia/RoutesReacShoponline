@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
-import './Product.scss'
+import './Product.scss';
+import {Link} from 'react-router-dom';
 
 class Product extends Component {
   render() { 
-    const { imagen, precio, nombre } = this.props.product
+    const { imagen, precio, nombre, id } = this.props.product
     return ( 
-      <li>
+      <li id={id}>
         <img src={`img/${imagen}.png`} alt=""/>
         <p>{nombre} <span>{precio}$</span></p>
-        <a href="http://google.com">Ver mas</a>
+        <Link to={`/producto/${id}`}>Ver mLinks</Link>
       </li>
     );
   }

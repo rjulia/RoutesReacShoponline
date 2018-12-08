@@ -1,11 +1,15 @@
 import React from 'react';
-import './Header.scss'
+import './Header.scss';
+import {Link} from 'react-router-dom';
 
 const Header = (props) => {
      return (
-          <header>
-               <img src="/img/logo.png" alt=""/>
-          </header>
+       <header>
+         <Link to={'/'}>
+           <img src="/img/logo.png" alt="" />
+
+         </Link>
+       </header>
      )
 }
  
