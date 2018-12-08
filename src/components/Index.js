@@ -4,7 +4,7 @@ import Error404 from './Error404.js';
 import Productos from './Productos';
 import Product from './Product';
 import Header from './Header';
-
+import SingleProduct from './SingleProduct';
 
 
 
@@ -14,6 +14,7 @@ export {
   Error404,
   Productos,
   Product,
-  Header
+  Header,
+  SingleProduct
 }
 
