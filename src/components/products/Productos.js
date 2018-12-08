@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Product  } from "./Index";
+import { Product  } from "../Index"; 
 export default class Productos extends Component {
   render() {
     return (

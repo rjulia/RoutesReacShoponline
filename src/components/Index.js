@@ -1,10 +1,10 @@
 import Inicio from './Inicio.js';
-import Nosotros from './Nosotros.js';
-import Error404 from './Error404.js';
-import Productos from './Productos';
-import Product from './Product';
-import Header from './Header';
-import SingleProduct from './SingleProduct';
+import Nosotros from './nosotros/Nosotros.js';
+import Error404 from './error/Error404.js';
+import Productos from './products/Productos';
+import Product from './products/Product';
+import Header from './header/Header';
+import SingleProduct from './products/SingleProduct';
 
 
 
